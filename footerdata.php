@@ -67,7 +67,9 @@ function footer_menu($linkarray)
     $menu = '<ul  class="space-y-3 text-gray-700 ">';
 
     for ($i = 0; $i < count($linkarray); $i++) {
-        $menu .= "<li><a href='" . $linkarray[$i]['link'] . "'>" . $linkarray[$i]['name'] . "</a></li>";
+        ///$menu .= "<li><a href='" . $linkarray[$i]['link'] . "'>" . $linkarray[$i]['name'] . "</a></li>";
+        $menu .= sprintf( '<li><a href="%s">%s</a></li>',$linkarray[$i]['link'],$linkarray[$i]['name']);
+       
     }
     $menu .= '</ul>';
 
